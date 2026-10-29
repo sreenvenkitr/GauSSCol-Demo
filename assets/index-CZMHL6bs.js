@@ -390,9 +390,10 @@
                     Run Local Vision Server
                 </div>
                 <div style="color: #94a3b8; font-size: 11.5px;">
-                    Open a terminal in the <code>GauSSColVision/</code> folder and start the service:
+                    Clone the companion repository (or open your local <code>GauSSColVision/</code> folder) and run:
                 </div>
-                <pre>cd GauSSColVision
+                <pre>git clone https://github.com/sreenvenkitr/GauSSColVision.git
+cd GauSSColVision
 run_server.bat</pre>
                 <div style="color: #64748b; font-size: 11px;">
                     Starts local API service at <code>http://127.0.0.1:8010</code>.

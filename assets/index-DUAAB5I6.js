@@ -437,8 +437,21 @@ VISION_GEMINI_MODEL=gemini-flash-lite-latest</pre>
                     <span id="modal-conn-status" style="font-size: 11.5px; color: #94a3b8;"></span>
                 </div>
                 ${typeof window<`u`&&window.location.protocol===`https:`?`
-                <div style="margin-top: 10px; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 8px; padding: 8px 12px; font-size: 11px; color: #fde68a; line-height: 1.45;">
-                    <strong>🔒 HTTPS Tip:</strong> Browsers block local HTTP calls from HTTPS by default. If connection fails, click the <strong>lock/tune icon</strong> in the URL bar ➔ <strong>Site settings</strong> ➔ set <strong>Insecure content</strong> to <strong>Allow</strong> ➔ refresh.
+                <div style="margin-top: 10px; background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 8px; padding: 10px 12px; font-size: 11px; color: #fde68a; line-height: 1.5;">
+                    <div style="font-weight: 700; margin-bottom: 4px; display: flex; align-items: center; gap: 5px;">
+                        <span>🔒</span> Connecting from HTTPS (Chrome / Edge PNA Check)
+                    </div>
+                    <div>
+                        Modern Chrome blocks public HTTPS pages from calling local HTTP (127.0.0.1) under <em>Local Network Access</em> rules. To allow connection:
+                    </div>
+                    <ol style="margin: 6px 0 6px 18px; padding: 0;">
+                        <li>Open a tab to <code style="user-select: all; background: rgba(0,0,0,0.4); padding: 1px 4px; border-radius: 3px;">chrome://flags/#local-network-access-check</code> (or <code style="user-select: all; background: rgba(0,0,0,0.4); padding: 1px 4px; border-radius: 3px;">#block-insecure-private-network-requests</code>).</li>
+                        <li>Change dropdown to <strong>Disabled</strong> and click <strong>Relaunch</strong>.</li>
+                        <li>Refresh this page and click <strong>⟳ Retry Connection</strong>.</li>
+                    </ol>
+                    <div style="color: #94a3b8; font-size: 10.5px; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 5px; margin-top: 4px;">
+                        <em>Zero-configuration alternative:</em> Run UI locally with <code style="background: rgba(0,0,0,0.4); padding: 1px 4px; border-radius: 3px;">python -m http.server 8000</code> in GauSSCol-Demo and open <code style="background: rgba(0,0,0,0.4); padding: 1px 4px; border-radius: 3px;">http://localhost:8000</code>.
+                    </div>
                 </div>
                 `:``}
             </div>

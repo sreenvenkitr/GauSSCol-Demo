@@ -77,27 +77,19 @@ run_server.bat
 ```
 The FastAPI server will start listening at `http://127.0.0.1:8010`.
 
-### 5. Connect from the Web Application
-
-#### Option A: Hosted GitHub Pages (Requires Chrome Local Network Access flag)
-Because `https://sreenvenkitr.github.io` is a public HTTPS origin, modern Chrome/Edge blocks requests to local HTTP (`http://127.0.0.1:8010`) under **Local Network Access (Private Network Access)** security checks:
-1. Open a new tab in Chrome/Edge and go to:
-   ```text
-   chrome://flags/#local-network-access-check
-   ```
-   *(or `chrome://flags/#block-insecure-private-network-requests` in earlier Chrome builds)*
-2. Change the setting to **Disabled**.
-3. Click the blue **Relaunch** button at the bottom of Chrome.
-4. Open the [GauSSCol.SI Web Demo](https://sreenvenkitr.github.io/GauSSCol-Demo/).
-5. Click **⟳ Retry Connection** in the **Ask GauSSCol.SI** panel. The status will immediately turn 🟢 **Online**.
-
-#### Option B: Run the UI Locally (Zero Configuration / Recommended)
-Clone or download this repository locally and run:
+### 5. Launch the Web Application Locally
+In your cloned `GauSSCol-Demo` directory, simply run:
 ```bash
 run_demo.bat
 ```
 *(Or run `python -m http.server 8000`)*.
-This opens `http://localhost:8000` in your browser. Because both the UI and backend run locally on HTTP, there are **no browser security restrictions, flags, or warnings**—it connects instantly!
+
+This automatically opens `http://localhost:8000` in your default web browser.
+
+Because both the Web UI and the Vision Server run locally:
+- **Zero browser security tweaks:** No need to modify Chrome flags or allow insecure content.
+- **Instant Connection:** The **Ask GauSSCol.SI** panel connects to port 8010 immediately (`🟢 Online`).
+- **Complete Feature Set:** Full 3D splat rendering, camera navigation, lasso selection, multi-view VLM reasoning, and SAM 2.1 neural segmentation are fully active!
 
 ---
 
